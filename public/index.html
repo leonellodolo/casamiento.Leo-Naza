@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSVP Casamiento Leo & Naza</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container container--form">
+      <section class="card">
+        <h1>Confirmación de asistencia</h1>
+        <p class="subtitle">
+          Leo & Naza se casan 💍<br />
+          Completá tus datos para confirmar asistencia.
+        </p>
+
+        <form id="rsvp-form" class="form">
+          <div class="grid">
+            <label>
+              Nombre
+              <input type="text" name="nombre" required />
+            </label>
+
+            <label>
+              Apellido
+              <input type="text" name="apellido" required />
+            </label>
+
+            <label>
+              Edad
+              <input type="number" name="edad" min="1" max="120" required />
+            </label>
+
+            <label>
+              Género
+              <select name="genero">
+                <option value="mujer">Mujer</option>
+                <option value="hombre">Hombre</option>
+                <option value="otro">Otro</option>
+                <option value="prefiero no decirlo">Prefiero no decirlo</option>
+              </select>
+            </label>
+
+            <label>
+              ¿Asistís?
+              <select name="asistencia" required>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+              </select>
+            </label>
+
+            <label>
+              Teléfono (opcional)
+              <input type="tel" name="telefono" />
+            </label>
+
+            <label>
+              Email (opcional)
+              <input type="email" name="email" />
+            </label>
+          </div>
+
+          <label>
+            Necesidades/alimentación especial
+            <textarea
+              name="necesidadesComida"
+              rows="3"
+              placeholder="Ej: vegetariano, alergia al maní, celiaquía, etc."
+            ></textarea>
+          </label>
+
+          <div class="grid">
+            <label>
+              Canción sugerida para bailar
+              <input type="text" name="cancion" placeholder="Nombre de la canción" />
+            </label>
+
+            <label>
+              Artista (opcional)
+              <input type="text" name="artista" placeholder="Nombre del artista" />
+            </label>
+          </div>
+
+          <button type="submit">Enviar confirmación</button>
+          <p id="form-status" class="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <script type="module" src="form.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /rsvps/{rsvpId} {
+      // Cualquiera puede enviar una confirmación
+      allow create: if request.resource.data.nombre is string
+                    && request.resource.data.apellido is string
+                    && request.resource.data.edad is number
+                    && request.resource.data.edad > 0;
+      // Solo lectura (panel de admin)
+      allow read: if true;
+      // Nadie puede modificar ni borrar respuestas enviadas
+      allow update, delete: if false;
+    }
+  }
+}

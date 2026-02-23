@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel de estadísticas — Leo & Naza</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container container--admin">
+      <section class="card">
+        <div class="stats-header">
+          <div>
+            <h2>Resumen de invitados</h2>
+            <p class="subtitle">Leo & Naza 💍 — Panel interno</p>
+          </div>
+          <button id="refresh-stats" type="button">Actualizar</button>
+        </div>
+
+        <div class="stats-grid" id="stats-grid">
+          <article><h3>Total respuestas</h3><p id="totalInvitados">0</p></article>
+          <article><h3>Confirmados</h3><p id="totalConfirmados">0</p></article>
+          <article><h3>No asisten</h3><p id="totalNoAsisten">0</p></article>
+          <article><h3>Promedio de edad</h3><p id="promedioEdad">0</p></article>
+          <article><h3>Menores de 45</h3><p id="menores45">0</p></article>
+          <article><h3>Mayores de 60</h3><p id="mayores60">0</p></article>
+          <article><h3>Mujeres (confirmadas)</h3><p id="mujeres">0</p></article>
+          <article><h3>Hombres (confirmados)</h3><p id="hombres">0</p></article>
+          <article><h3>Otro/No declara</h3><p id="otros">0</p></article>
+          <article><h3>Con necesidad alimentaria</h3><p id="necesidades">0</p></article>
+        </div>
+
+        <h3>Canciones sugeridas</h3>
+        <ul id="canciones-list" class="songs-list"></ul>
+      </section>
+
+      <section class="card">
+        <h2>Lista completa de invitados</h2>
+        <div class="table-wrapper">
+          <table id="invitados-table">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Género</th>
+                <th>Asiste</th>
+                <th>Teléfono</th>
+                <th>Email</th>
+                <th>Necesidades alimentarias</th>
+                <th>Canción sugerida</th>
+                <th>Artista</th>
+                <th>Fecha registro</th>
+              </tr>
+            </thead>
+            <tbody id="invitados-tbody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="admin.js"></script>
+  </body>
+</html>

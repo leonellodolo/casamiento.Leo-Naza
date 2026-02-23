@@ -1,0 +1,13 @@
+{
+  "name": "casamiento-leo-naza",
+  "version": "1.0.0",
+  "description": "Formulario de confirmación de asistencia para casamiento con estadísticas en tiempo real",
+  "scripts": {
+    "deploy": "firebase deploy",
+    "deploy:hosting": "firebase deploy --only hosting",
+    "deploy:rules": "firebase deploy --only firestore:rules"
+  },
+  "keywords": ["casamiento", "rsvp", "firebase"],
+  "author": "",
+  "license": "ISC"
+}
