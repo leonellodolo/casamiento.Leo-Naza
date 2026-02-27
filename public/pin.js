@@ -14,7 +14,7 @@
       overlay.style.transition = 'opacity 0.4s ease';
       setTimeout(() => {
         overlay.remove();
-        content.removeAttribute('hidden');
+        content.style.setProperty('display', 'block', 'important');
       }, 400);
     } else {
       errorMsg.hidden = false;
