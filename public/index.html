@@ -11,7 +11,7 @@
       <section class="card">
         <h1>Confirmación de asistencia</h1>
         <p class="subtitle">
-          Leo & Naza se casan 💍<br />
+          L & N 2020 - <span class="infinity-icon">∞</span><br />
           Completá tus datos para confirmar asistencia.
         </p>
 
@@ -33,46 +33,30 @@
             </label>
 
             <label>
-              Género
-              <select name="genero">
-                <option value="mujer">Mujer</option>
-                <option value="hombre">Hombre</option>
-                <option value="otro">Otro</option>
-                <option value="prefiero no decirlo">Prefiero no decirlo</option>
-              </select>
-            </label>
-
-            <label>
-              ¿Asistís?
-              <select name="asistencia" required>
-                <option value="si">Sí</option>
-                <option value="no">No</option>
-              </select>
-            </label>
-
-            <label>
-              Teléfono (opcional)
-              <input type="tel" name="telefono" />
-            </label>
-
-            <label>
-              Email (opcional)
-              <input type="email" name="email" />
+              DNI
+              <input type="text" name="dni" inputmode="numeric" required />
             </label>
           </div>
 
           <label>
-            Necesidades/alimentación especial
-            <textarea
-              name="necesidadesComida"
-              rows="3"
-              placeholder="Ej: vegetariano, alergia al maní, celiaquía, etc."
-            ></textarea>
+            ¿Asistís?
+            <select name="asistencia" required>
+              <option value="si">Sí</option>
+              <option value="no">No</option>
+            </select>
+          </label>
+
+          <label>
+            ¿Sos vegetariano o vegano?
+            <select name="vegetarianoVegano" required>
+              <option value="no">No</option>
+              <option value="si">Sí</option>
+            </select>
           </label>
 
           <div class="grid">
             <label>
-              Canción sugerida para bailar
+              Canción que te gustaría escuchar
               <input type="text" name="cancion" placeholder="Nombre de la canción" />
             </label>
 
