@@ -7,7 +7,23 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="container container--admin">
+    <!-- PIN overlay -->
+    <div id="pin-overlay" class="pin-overlay">
+      <div class="pin-card">
+        <h2>Panel interno</h2>
+        <p class="subtitle">Leo & Naza 💍</p>
+        <p class="pin-label">Ingresá el PIN de acceso</p>
+        <div class="pin-inputs">
+          <input class="pin-digit" type="password" inputmode="numeric" maxlength="1" />
+          <input class="pin-digit" type="password" inputmode="numeric" maxlength="1" />
+          <input class="pin-digit" type="password" inputmode="numeric" maxlength="1" />
+          <input class="pin-digit" type="password" inputmode="numeric" maxlength="1" />
+        </div>
+        <p id="pin-error" class="pin-error" hidden>PIN incorrecto. Intentá de nuevo.</p>
+      </div>
+    </div>
+
+    <main id="admin-content" class="container container--admin" hidden>
       <section class="card">
         <div class="stats-header">
           <div>
@@ -24,9 +40,7 @@
           <article><h3>Promedio de edad</h3><p id="promedioEdad">0</p></article>
           <article><h3>Menores de 45</h3><p id="menores45">0</p></article>
           <article><h3>Mayores de 60</h3><p id="mayores60">0</p></article>
-          <article><h3>Mujeres (confirmadas)</h3><p id="mujeres">0</p></article>
-          <article><h3>Hombres (confirmados)</h3><p id="hombres">0</p></article>
-          <article><h3>Otro/No declara</h3><p id="otros">0</p></article>
+          <article><h3>Vegetariano/Vegano (sí)</h3><p id="vegetarianosVeganos">0</p></article>
           <article><h3>Con necesidad alimentaria</h3><p id="necesidades">0</p></article>
         </div>
 
@@ -43,10 +57,9 @@
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Edad</th>
-                <th>Género</th>
+                <th>DNI</th>
                 <th>Asiste</th>
-                <th>Teléfono</th>
-                <th>Email</th>
+                <th>Vegetariano/Vegano</th>
                 <th>Necesidades alimentarias</th>
                 <th>Canción sugerida</th>
                 <th>Artista</th>
@@ -57,8 +70,9 @@
           </table>
         </div>
       </section>
-    </main>
+    </main><!-- #admin-content -->
 
     <script type="module" src="admin.js"></script>
+    <script src="pin.js"></script>
   </body>
 </html>
